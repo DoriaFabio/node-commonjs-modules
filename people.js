@@ -1,11 +1,16 @@
 const nomeCompleto = require("./names");
-const hobby = require("./hobbies");
+const hobbyFile = require("./hobbies");
  
 
-console.log(nomeCompleto("Fabio", "Doria"));
-console.log(hobby("film", "musica", "libri"));
+// console.log(nomeCompleto("Fabio", "Doria"));
+// console.log(hobbyFile("film", "musica", "libri"));
+
+const user = nomeCompleto("Fabio", "Doria");
+const hobbyArray = hobbyFile("film", "musica", "libri");
 
 const people = () => ({
-    nomeCompleto,
-    hobby
+    fullName: `${user.firstName} ${user.lastName}`,
+    hobbies: hobbyArray.hobby
 });
+
+console.log(people());
