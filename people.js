@@ -1,0 +1,1 @@
+const nomeCompleto = require("./names");
